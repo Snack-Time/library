@@ -4,20 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form method="post" action="README.md">
-        <label for="title">Book Title: </label>
-        <input type="text">
-        <label for="author">Author: </label>
-        <input type="text">
-        <label for="pages"># of Pages: </label>
-        <input type="number">
-        <label for="read">Finished?: </label>
-        <input type="checkbox"></form>
-        <button type="submit">Submit</button>
+    <div class="container">
+        <form class="add-book" method="post">
+            <label for="title">Book Title: </label>
+            <input type="text" id="title">
+            <label for="author">Author: </label>
+            <input type="text" id="author">
+            <label for="pages"># of Pages: </label>
+            <input type="number" id="pages">
+            <label for="read">Finished?: </label>
+            <input type="checkbox" id="read" value="read">
+            <button name="data" type="button" onclick="newBook()">Submit</button>
+        </form>
+        <button name="remove" type="button" onclick="deleteCard()">Remove Book</button>
+        <button name="remove" type="button" onclick="updateRead()">Mark Book As Read/Unread</button>
+        <div class="card-container">
+            <div class="card">
+                <p class="title">The Inner Game of Tennis</p>
+                <p class="book-info author">By Timothy Gallwey</p>
+                <p class="book-info page-count">122 Pages</p>
+                <p class="book-info read-check">Read</p>
+                <p class="book-info bookID">Book ID Number: 100</p>
+            </div>
+        </div>
+    </div>
+    <div class="remove"></div>
 </body>
 <script src="script.js"></script>
 </html>

@@ -1,3 +1,41 @@
-p {
-    color: red;
+.container, .card-container {
+    display: grid;
+}
+
+.container {
+    gap: 5px;
+}
+
+.add-book {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    align-self: center;
+    gap: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: lightskyblue;
+    border-radius: 10%;
+}
+
+.title {
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.book-info {
+    font-style: italic;
 }
